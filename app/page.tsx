@@ -1,8 +1,9 @@
-import { getPokemonData } from '@/lib/pokeAPI'
-import PokemonGrid from '@/components/PokemonGrid'
+import { getPokemonData } from "@/lib/pokeAPI";
+import PokemonGrid from "@/components/PokemonGrid";
 
 export default async function Home() {
   const pokemonData = await getPokemonData();
+  console.log(pokemonData);
 
   return (
     <main>
@@ -11,7 +12,5 @@ export default async function Home() {
         <PokemonGrid pokemonData={pokemonData} />
       </div>
     </main>
-  )
+  );
 }
-
-
