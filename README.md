@@ -32,3 +32,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+1. HTTP Get request to PokeAPI
+   1. returns object of name, url. use url to extract id.
+   2. Use id to append image to data.results
+2. PokemonGrid Component.
+   1. Map through each entry of the new results.
+   2. Create a div and Pokemon Card for each result.
+3. PokemonCard Component
