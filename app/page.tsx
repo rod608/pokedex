@@ -8,7 +8,6 @@ export default async function Home() {
   return (
     <main>
       <div>
-        <h1>Hello, World!</h1>
         <PokemonGrid pokemonData={pokemonData} />
       </div>
     </main>
