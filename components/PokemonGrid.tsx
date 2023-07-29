@@ -1,11 +1,6 @@
 'use client'
+import { Pokemon } from '@/types';
 import PokemonCard from '@/components/PokemonCard'
-
-export interface Pokemon {
-    name: string;
-    url: string;
-    sprites: object;
-}
 
 interface PokemonListProps {
     pokemonData: Pokemon[];

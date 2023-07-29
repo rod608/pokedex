@@ -1,3 +1,4 @@
+import { Pokemon } from '@/types';
 import PokemonGrid from '@/components/PokemonGrid'
 
 async function getPokemonData() {
@@ -7,7 +8,7 @@ async function getPokemonData() {
 }
 
 async function addImagesToPokemonData(pokemonList: any) {
-  pokemonList.forEach((pokemon) => {
+  pokemonList.forEach((pokemon: Pokemon) => {
     const id = 0o0;
     pokemon.id = pokemon.url.split('/')[6];
     pokemon.front_sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`;
