@@ -36,6 +36,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 1. HTTP Get request to PokeAPI
    1. returns object of name, url. use url to extract id.
    2. Use id to append image to data.results
+   3. Create Pokemon type.
 2. PokemonGrid Component.
    1. Map through each entry of the new results.
    2. Create a div and Pokemon Card for each result.

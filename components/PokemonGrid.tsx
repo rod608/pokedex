@@ -1,4 +1,3 @@
-'use client'
 import { Pokemon } from '@/types';
 import PokemonCard from '@/components/PokemonCard'
 
