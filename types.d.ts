@@ -1,6 +1,8 @@
 export interface Pokemon {
+    // returned by API
     name: string;
-    id: string;
     url: string;
+    // added
+    id: string;
     front_sprite: string;
 }
