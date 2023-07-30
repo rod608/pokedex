@@ -2,7 +2,7 @@ export interface GeneralPokemon {
     // returned by API
     name: string;
     url: string;
-    
+
     // added
     id: string;
     front_sprite: string;
@@ -56,4 +56,12 @@ interface IndividualPokemon {
       name: string;
       url: string;
     }[];
+
+    // Images
+    sprites: {
+        back_default: string;
+        back_shiny: string;
+        front_default: string;
+        front_shiny: string;
+    };
 }
