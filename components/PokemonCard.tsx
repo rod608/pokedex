@@ -22,7 +22,7 @@ export default function PokemonCard({ pokemon }: PokemonCardProps) {
         </div>
       </Link>
       <div className="flex">
-        <p className="text-slate-500 ms-2 mt-1">{`#${0o0 + pokemon.id}`}</p>
+        <p className="text-slate-500 ms-2 mt-1">{`#${pokemon.id.toString().padStart(4, '0')}`}</p>
         <p className="text-slate-700 capitalize font-sans text-2xl ms-4">
           {pokemon.name}
         </p>
