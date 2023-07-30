@@ -11,10 +11,10 @@ export default function PokemonCard({ pokemon }: PokemonCardProps) {
     pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
 
   return (
-    <Link href={`/${pokemon.name}`}>
-      <div className="border flex justify-center">
+    <Link href={`/${pokemon.name}`} className="pokemon_card">
+      <div className="border flex justify-center pokemon_card_div">
         <div className="py-4 flex flex-col">
-          <h2 className="mx-auto">{pokemonName}</h2>
+          <h2 className="mx-auto pokemon_card_name">{pokemonName}</h2>
           <Image
             src={pokemon.front_sprite}
             alt={`Image of ${pokemonName}`}

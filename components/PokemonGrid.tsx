@@ -30,14 +30,13 @@ export default function PokemonGrid({ pokemonList }: PokemonListProps) {
           id="pokemonSearch"
           placeholder="Search Pokemon"
           onChange={(e) => setSearchValue(e.target.value)}
-          className="w-1/2 mx-auto"
+          className="w-3/4 lg:w-1/2 mx-auto"
         />
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-8 my-8">
         {filteredPokemonList.map((pokemon) => (
           <PokemonCard pokemon={pokemon} key={pokemon.id} />
         ))}
-        I
       </div>
     </div>
   );
