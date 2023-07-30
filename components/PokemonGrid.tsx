@@ -1,19 +1,35 @@
+"use client";
+
 import { Pokemon } from "@/types";
 import PokemonCard from "@/components/PokemonCard";
 
+import { useState } from "react";
+import { Input } from "@/components/ui/input";
+
 interface PokemonListProps {
-  pokemonData: Pokemon[];
+  pokemonList: Pokemon[];
 }
 
-export default function PokemonList({ pokemonData }: PokemonListProps) {
+export default function PokemonGrid({ pokemonList }: PokemonListProps) {
+  const [searchValue, setSearchValue] = useState("");
+
   return (
     <div className="container">
-      <div className="grid grid-cols-4 gap-4 border p-8 my-14">
-        {pokemonData.map((pokemon) => (
-          <div key={pokemon.id} className="border flex justify-center">
-            <PokemonCard pokemon={pokemon} />
-          </div>
+      <div className="mt-16">
+        <Input
+          type="text"
+          value={searchValue}
+          id="pokemonSearch"
+          placeholder="Search Pokemon"
+          className="w-1/2 mx-auto"
+          onChange={(e) => setSearchValue(e.target.value)}
+        />
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-8 my-8">
+        {pokemonList.map((pokemon) => (
+          <PokemonCard pokemon={pokemon} />
         ))}
+        I
       </div>
     </div>
   );
