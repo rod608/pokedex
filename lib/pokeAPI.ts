@@ -1,4 +1,4 @@
-import { Pokemon } from '@/types'
+import { GeneralPokemon } from '@/types'
 
 // All 151 Original Pokemon
 export async function getAllPokemonData() {
@@ -7,8 +7,8 @@ export async function getAllPokemonData() {
     return addImagesToPokemonData(data.results);
 }
   
-  async function addImagesToPokemonData(pokemonList: Pokemon[]) {
-    pokemonList.forEach((pokemon: Pokemon) => {
+  async function addImagesToPokemonData(pokemonList: GeneralPokemon[]) {
+    pokemonList.forEach((pokemon: GeneralPokemon) => {
       pokemon.id = pokemon.url.split('/')[6];
       pokemon.front_sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pokemon.id}.png`;
     })

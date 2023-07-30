@@ -1,9 +1,9 @@
-import { Pokemon } from "@/types";
+import { GeneralPokemon } from "@/types";
 import Link from "next/link";
 import Image from "next/image";
 
 interface PokemonCardProps {
-  pokemon: Pokemon;
+  pokemon: GeneralPokemon;
 }
 
 export default function PokemonCard({ pokemon }: PokemonCardProps) {

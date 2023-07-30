@@ -1,19 +1,19 @@
 "use client";
 
-import { Pokemon } from "@/types";
+import { GeneralPokemon } from "@/types";
 import PokemonCard from "@/components/PokemonCard";
 
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 
 interface PokemonListProps {
-  pokemonList: Pokemon[];
+  pokemonList: GeneralPokemon[];
 }
 
 export default function PokemonGrid({ pokemonList }: PokemonListProps) {
   const [searchValue, setSearchValue] = useState("");
 
-  const filterPokemon = (pokemonList: Pokemon[]) => {
+  const filterPokemon = (pokemonList: GeneralPokemon[]) => {
     return pokemonList.filter((pokemon) =>
       pokemon.name.toLowerCase().includes(searchValue.toLowerCase())
     );
