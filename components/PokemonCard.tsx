@@ -12,7 +12,7 @@ export default function PokemonCard({ pokemon }: PokemonCardProps) {
 
   return (
     <Link href={`/${pokemon.name}`}>
-      <div key={pokemon.id} className="border flex justify-center">
+      <div className="border flex justify-center">
         <div className="py-4 flex flex-col">
           <h2 className="mx-auto">{pokemonName}</h2>
           <Image
