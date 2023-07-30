@@ -2,6 +2,7 @@ export interface GeneralPokemon {
     // returned by API
     name: string;
     url: string;
+    
     // added
     id: string;
     front_sprite: string;
