@@ -16,4 +16,4 @@ export async function getPokemonData() {
     return pokemonList;
   }
 
-// Information on Individual Pokemon
+// Individual Pokemon
