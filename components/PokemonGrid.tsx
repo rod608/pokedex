@@ -33,7 +33,7 @@ export default function PokemonGrid({ pokemonList }: PokemonListProps) {
           className="w-3/4 lg:w-1/2 mx-auto"
         />
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-8 my-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-8 my-8">
         {filteredPokemonList.map((pokemon) => (
           <PokemonCard pokemon={pokemon} key={pokemon.id} />
         ))}

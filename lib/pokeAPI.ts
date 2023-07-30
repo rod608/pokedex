@@ -10,7 +10,7 @@ export async function getAllPokemonData() {
   async function addImagesToPokemonData(pokemonList: Pokemon[]) {
     pokemonList.forEach((pokemon: Pokemon) => {
       pokemon.id = pokemon.url.split('/')[6];
-      pokemon.front_sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`;
+      pokemon.front_sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pokemon.id}.png`;
     })
     return pokemonList;
   }

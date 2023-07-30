@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=REM&display=swap');
 
 @layer base {
   :root {
@@ -78,20 +77,12 @@
   }
 }
 
-.pokemon_card_name {
-  font-family: 'REM', sans-serif;
-}
-
 .pokemon_card {
   background: #f0f0f0;
-  border-radius: 15px;
-}
-
-.pokemon_card_div {
   border-radius: 5px;
 }
 
-.pokemon_card_div:hover {
-  transition: all .1s ease-in-out;
+.pokemon_card:hover {
+  transition: all .2s ease-in-out;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
