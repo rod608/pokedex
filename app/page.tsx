@@ -8,7 +8,7 @@ export default async function Home() {
   return (
     <main>
       <div>
-        <PokemonGrid pokemonData={pokemonData} />
+        <PokemonGrid pokemonList={pokemonData} />
       </div>
     </main>
   );
