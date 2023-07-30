@@ -13,6 +13,14 @@ interface PokemonListProps {
 export default function PokemonGrid({ pokemonList }: PokemonListProps) {
   const [searchValue, setSearchValue] = useState("");
 
+  const filterPokemon = (pokemonList: Pokemon[]) => {
+    return pokemonList.filter((pokemon) =>
+      pokemon.name.toLowerCase().includes(searchValue.toLowerCase())
+    );
+  }
+
+  const filteredPokemonList = filterPokemon(pokemonList);
+
   return (
     <div className="container">
       <div className="mt-16">
@@ -21,12 +29,12 @@ export default function PokemonGrid({ pokemonList }: PokemonListProps) {
           value={searchValue}
           id="pokemonSearch"
           placeholder="Search Pokemon"
-          className="w-1/2 mx-auto"
           onChange={(e) => setSearchValue(e.target.value)}
+          className="w-1/2 mx-auto"
         />
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-8 my-8">
-        {pokemonList.map((pokemon) => (
+        {filteredPokemonList.map((pokemon) => (
           <PokemonCard pokemon={pokemon} />
         ))}
         I
