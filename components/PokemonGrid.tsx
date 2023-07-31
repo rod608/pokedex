@@ -23,7 +23,7 @@ export default function PokemonGrid({ pokemonList }: PokemonListProps) {
 
   return (
     <div className="container">
-      <div className="mt-16">
+      <div className="mt-12">
         <Input
           type="text"
           value={searchValue}
