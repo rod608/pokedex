@@ -3,6 +3,7 @@ import { IndividualPokemon } from "@/types";
 
 import Image from "next/image";
 import PokemonStat from "@/components/PokemonStat";
+import PokemonType from "@/components/PokemonType";
 
 export default async function PokemonPage({
   params,
@@ -19,7 +20,7 @@ export default async function PokemonPage({
   }
 
   return (
-    <div className="mt-12 mb-8 mx-auto" style={{ maxWidth: "1024px" }}>
+    <div className="mt-12 mb-8 mx-auto container">
       <h1 className="text-center text-4xl capitalize ">
         {pokemonName}
         <span className="text-slate-500">
@@ -27,8 +28,8 @@ export default async function PokemonPage({
         </span>
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 border mt-8">
-        <div className="">
+      <div className="grid grid-cols-1 md:grid-cols-2 border mt-8 bg-slate-200 p-4">
+        <div className="bg-slate-100">
           <Image
             src={pokemonData.sprites.front_default}
             alt={"Picture of " + { pokemonName }}
@@ -37,20 +38,34 @@ export default async function PokemonPage({
             className="border mx-auto"
           />
 
-          <div>
-            {pokemonData.stats.map((statObject) => {
-              return (
-                <PokemonStat statName={statObject.stat.name} statValue={statObject.base_stat} key={pokemonData.id}/>
-              );
-            })}
+          <div className="mx-10 border bg-slate-100">
+            data
+            <div className="border">
+              Types:
+              {pokemonData.types.map((typeObject) => {
+                return (
+                  <PokemonType
+                    name={typeObject.type.name}
+                    key={pokemonData.id}
+                  />
+                );
+              })}
+            </div>
+            {pokemonData.height}
+            {pokemonData.stats.length}
           </div>
         </div>
 
-        <div className="flex flex-col border">
-          data
-          <div className="">Types:</div>
-          {pokemonData.height}
-          {pokemonData.stats.length}
+        <div className="border bg-slate-100">
+          {pokemonData.stats.map((statObject) => {
+            return (
+              <PokemonStat
+                statName={statObject.stat.name}
+                statValue={statObject.base_stat}
+                key={pokemonData.id}
+              />
+            );
+          })}
         </div>
       </div>
     </div>
