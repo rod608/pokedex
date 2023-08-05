@@ -77,7 +77,7 @@ export default function PokemonAccordion({
         <AccordionContent>
             {pokemonObj.abilities.map((abilityObject) => {
               return (
-                <li>
+                <li key={pokemonObj.id}>
                   {abilityObject.ability.name}: {abilityObject.is_hidden}
                 </li>
               );

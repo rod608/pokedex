@@ -17,7 +17,7 @@ export default function PokemonGrid({ pokemonList }: PokemonListProps) {
     return pokemonList.filter((pokemon) =>
       pokemon.name.toLowerCase().includes(searchValue.toLowerCase())
     );
-  }
+  };
 
   const filteredPokemonList = filterPokemon(pokemonList);
 
@@ -28,7 +28,8 @@ export default function PokemonGrid({ pokemonList }: PokemonListProps) {
           type="text"
           value={searchValue}
           id="pokemonSearch"
-          placeholder="Search Pokemon"
+          placeholder="Search for Pokémon..."
+          aria-label="Filter Pokémon"
           onChange={(e) => setSearchValue(e.target.value)}
           className="w-3/4 lg:w-1/2 mx-auto"
         />
