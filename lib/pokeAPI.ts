@@ -1,4 +1,4 @@
-import { GeneralPokemon, IndividualPokemon, PokemonFlavorText } from '@/types'
+import { GeneralPokemon, IndividualPokemon } from '@/types'
 
 const ENDPOINT = "https://pokeapi.co/api/v2/";
 
@@ -20,6 +20,6 @@ export async function getAllPokemonData() {
 // Individual Pokemon
 export async function getPokemonData(name: string) {
     const response = await fetch(ENDPOINT + `pokemon/${name}`);
-    const data = await response.json();
+    const data: IndividualPokemon = await response.json();
     return data;
 }
