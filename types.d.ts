@@ -8,7 +8,7 @@ export interface GeneralPokemon {
     front_sprite: string;
 }
 
-interface IndividualPokemon {
+export interface IndividualPokemon {
     // Identifiers
     id: number;
     name: string;

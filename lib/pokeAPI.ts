@@ -1,8 +1,10 @@
-import { GeneralPokemon } from '@/types'
+import { GeneralPokemon, IndividualPokemon, PokemonFlavorText } from '@/types'
+
+const ENDPOINT = "https://pokeapi.co/api/v2/";
 
 // All 151 Original Pokemon
 export async function getAllPokemonData() {
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151&offset=0');
+    const response = await fetch(ENDPOINT + "pokemon?limit=151&offset=0");
     const data = await response.json();
     return addImagesToPokemonData(data.results);
 }
@@ -17,7 +19,7 @@ export async function getAllPokemonData() {
 
 // Individual Pokemon
 export async function getPokemonData(name: string) {
-    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+    const response = await fetch(ENDPOINT + `pokemon/${name}`);
     const data = await response.json();
     return data;
 }

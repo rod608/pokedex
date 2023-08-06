@@ -20,13 +20,6 @@ export default function PokemonAccordion({
     <Accordion type="single" collapsible>
       <AccordionItem value="item-1" className="px-2">
         <AccordionTrigger>
-          <p className="font-mono">Description</p>
-        </AccordionTrigger>
-        <AccordionContent>description</AccordionContent>
-      </AccordionItem>
-
-      <AccordionItem value="item-2" className="px-2">
-        <AccordionTrigger>
           <p className="font-mono">Sprites</p>
         </AccordionTrigger>
         <AccordionContent>
@@ -39,7 +32,7 @@ export default function PokemonAccordion({
         </AccordionContent>
       </AccordionItem>
 
-      <AccordionItem value="item-3" className="px-2">
+      <AccordionItem value="item-2" className="px-2">
         <AccordionTrigger>
           <p className="font-mono">Types</p>
         </AccordionTrigger>
@@ -54,7 +47,7 @@ export default function PokemonAccordion({
         </AccordionContent>
       </AccordionItem>
 
-      <AccordionItem value="item-4" className="px-2">
+      <AccordionItem value="item-3" className="px-2">
         <AccordionTrigger>
           <p className="font-mono">Abilities</p>
         </AccordionTrigger>
@@ -69,7 +62,7 @@ export default function PokemonAccordion({
         </AccordionContent>
       </AccordionItem>
 
-      <AccordionItem value="item-5" className="px-2">
+      <AccordionItem value="item-4" className="px-2">
         <AccordionTrigger>
           <p className="font-mono">Base Stats</p>
         </AccordionTrigger>
@@ -86,7 +79,7 @@ export default function PokemonAccordion({
         </AccordionContent>
       </AccordionItem>
 
-      <AccordionItem value="item-6" className="px-2">
+      <AccordionItem value="item-5" className="px-2">
         <AccordionTrigger>
           <p className="font-mono">Height</p>
         </AccordionTrigger>
@@ -95,7 +88,7 @@ export default function PokemonAccordion({
         </AccordionContent>
       </AccordionItem>
 
-      <AccordionItem value="item-7" className="px-2">
+      <AccordionItem value="item-6" className="px-2">
         <AccordionTrigger>
           <p className="font-mono">Weight</p>
         </AccordionTrigger>
@@ -104,7 +97,7 @@ export default function PokemonAccordion({
         </AccordionContent>
       </AccordionItem>
 
-      <AccordionItem value="item-8" className="px-2">
+      <AccordionItem value="item-7" className="px-2">
         <AccordionTrigger>
           <p className="font-mono">Moves</p>
         </AccordionTrigger>
