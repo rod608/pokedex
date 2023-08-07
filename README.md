@@ -1,32 +1,22 @@
 <a name="readme-top"></a>
 
 
-
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="app/favicon.ico" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Pokédex</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    A search tool that returns data on individual Pokémon!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://pokedex-rod608.vercel.app/"><strong>View Demo »</strong></a>
     <br />
     <br />
-    <a href="https://pokedex-rod608.vercel.app/">View Demo</a>
+
   </p>
 </div>
 
@@ -59,18 +49,18 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![Product Name Screen Shot](/public/dashboard.png)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Filter through the original 151 Pokémon and view information whichever you'd like! 
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+Next.js has many configurations and rendering strategies that allow for instant improvement in load times, bundle sizes, and SEO of React Web Applications. It's recently received a major incremental update in V13, so I wanted to familiarize myself with it through this project.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+I became more familiar with:
+* Utilizing the App Router.
+* Static Site Generation: Homepage.
+* Server-side Rendering: Unique Pokémon Pages.
+* Delivering "Loading" states from the server.
 
-Use the `BLANK_README.md` to get started.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -78,8 +68,8 @@ Use the `BLANK_README.md` to get started.
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
+* ![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+* ![React.js](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 * ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 * ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 * ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
@@ -123,10 +113,13 @@ To get a local copy up and running follow these simple example steps.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+![Product Name Screen Shot](/public/demo.gif)
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+1. Filter for Pokémon using the search input.
+2. Click on any Pokémon to go to its page.
+3. Click on dropdown to view the Pokémon's Info.
+4. Click "Home" on the top right and repeat the process.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -135,14 +128,11 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Fetch Data
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+- [x] Fetch General Pokémon Data w/ the PokéAPI.
+- [x] Create a Grid populated with Pokémon Cards.
+- [x] Filter the grid of cards using a search input.
+- [x] Link the Cards to unique SSR /pokémonName pages.
+- [x] Fetch in-depth data on the Pokémon.
+- [x] Display the data to the User.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
